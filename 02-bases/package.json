@@ -8,8 +8,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "dev": "nodemon",
-    "build": "rimraf ./dist && tsc",
-    "start": "npm run build && node dist/app.js"
+    "build": "npm run test && rimraf ./dist && tsc",
+    "start": "node dist/app.js"
   },
   "author": "Santiago Rodriguez",
   "license": "MIT",
@@ -19,7 +19,7 @@
     "@types/uuid": "^9.0.8",
     "jest": "^29.7.0",
     "nodemon": "^3.1.0",
-    "rimraf": "^5.0.5",
+    "rimraf": "^5.0.10",
     "supertest": "^6.3.4",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
